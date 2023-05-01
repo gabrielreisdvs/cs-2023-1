@@ -107,25 +107,82 @@ O segundo é git commit, geralmente acompanhado de -m "mensagem do commit".
   Assim, o git consegue acompanhar os arquivos alterados utilizando o SHA1.
   
 17. Qual a palavra para indicar o último _commit_ em vez do valor de hash SHA1 correspondente?
+  
+   git log --abbrev
+  
 18. Quando se cria dois arquivos usando um editor de texto qualquer e, na sequência, executamos o comando **git add -u**, os dois arquivos criados passam de _untracked_ para _new file_?
+  
+  Não, pois o parâmetro -u não adiciona novos arquivos.
+  
 19. Qual o efeito da execução dos dois comandos abaixo, nesta ordem, em um dado repositório?
 **git reset --soft HEAD~1**
+  
+  Não altera o index ou a árvore de trabalho, mas reseta para o último commit. Mantém os arquivos alterados.
+  
 **git reset --hard**
+  
+  Reseta o index e a árvore de trabalho, além de descartar quaisquer alterações nos arquivos.
+  
 20. Após o emprego de um ambiente integrado de desenvolvimento (IDE), é comum a criação de arquivos e diretórios. Qual o comando que podemos empregar para remover arquivos e diretórios _untracked_?
+  
+  git clean -f -x
+  
 21. Qual o nome do arquivo no qual podemos inserir a indicação para o Git de arquivos e diretórios a serem ignorados?
+  
+  .gitignore
+  
 22. Quando se cria o arquivo _MinhaClasse.class_ em um dado diretório e desejamos que arquivos com a extensão .class, como neste caso, sejam ignorados por todos os membros de uma equipe que estão contribuindo com um dado projeto, como devemos proceder?
+  
+  Adicionar no .gitignore: *.class
+  
 23. jQuery é uma famosa biblioteca em JavaScript. Consulte detalhes em [jQuery](http://jquery.com). O repositório correspondente encontra-se em [gitRep](https://github.com/jquery/jquery.git). Faça o clone deste repositório.
+  
+  git clone https://github.com/jquery/jquery.git
+  
 24. No repositório **jqueryrepo**, criado no passo anterior, qual o efeito do comando
 **git shortlog -sne**?
+  
+  Exibe log com nome e e-mail de participantes.
+  
 25. No repositório **jqueryrepo**, qual o efeito de **git remote -v**?
+  
+  Exibe a url e nome do repositório remoto.
+  
 26. Um repositório Git pode ser etiquetado ao longo do tempo. Ou seja, _commits_ específicos podem ser “marcados” ou “etiquetados” para facilitar referências posteriores. Para listar todas as “etiquetas” (_tags_) estabelecidas para um dado repositório, qual comando deve ser executado?
+  
+  git tag para repositório local, e git ls-remote --tags <remote> para repositório remoto
+  
 27. Caso um dado repositório retorne muitas “marcas” ou “etiquetas” para o comando **git tag**, como retornar apenas aquelas que atendem a determinado padrão, por exemplo, iniciadas por 2.0?
+  
+  git tag --list '2.0*'
+  
 28. Qual o efeito do comando **git tag -a 3.4-gold -m “minha versão ouro”**?
+  
+  Cria a tag 3.4-gold com a mensagem "minha versão ouro".
+  
 29. Após executado o comando acima, qual o efeito de **git show 3.4-gold**?
+  
+  Mostra a mensagem da tag e os objetos.
+  
 30. O que o comando **git push origin 3.4-gold** teria como efeito?
+  
+  Envia a tag 3.4-gold para o repositório remoto.
+  
 31. Após executar um commit, qual o efeito de **git commit --amend**?
+  
+  Modifica o commit, adicionando novas staged changes ao commit.
+  
 32. Após executar **git add x.txt**, qual o efeito de **git reset HEAD x.txt**?
+  
+  O arquivo x.txt é removido.
+  
 33. Após alterar o conteúdo de um arquivo committed em passo anterior, qual o efeito do comando **git checkout -- a.txt**?
+  
+  Descarta as alterações.
+  
 34. Qual a diferença entre os comandos **git reset HEAD a.txt** e **git checkout -- a.txt**?
+  
+  O git reset remove o arquivo, ao passo que o checkout apenas descarta as alterações.
+  
 35. Veja como interpretar o resultado de git diff [aqui](https://medium.com/therobinkim/how-to-read-a-git-diff-6c87a9dc47c5). Execute, em um dos seus projetos, o comando **git diff HEAD~1 HEAD** e certifique-se de que entende o resultado apresentado.
 </DIV/>
