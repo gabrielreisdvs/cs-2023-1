@@ -37,9 +37,13 @@ git checkout -b <nome-branch> <commit>
   git checkout -b teste
   
   git add *
+  
   git commit -m "commits teste"
+  
   git push origin teste
+  
   git checkout master
+  
   git merge teste
   
 
