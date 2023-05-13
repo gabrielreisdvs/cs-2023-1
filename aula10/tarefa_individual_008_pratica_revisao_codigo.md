@@ -1,24 +1,32 @@
 ### Tarefa 008: Prática de Revisão de Código - 12/05/2023
 
-1. Considere o arquivo **seguro_veiculos.rar**, disponibilizado no SIGAA, no tópico de aula do dia 12/05/2023. Este arquivo é uma implementação para calcular o valor do desconto obtido na contratação de um seguro de veículos, conforme as regras definidas em arquivo constante da pasta **docs**, deste projeto.
+#### Cliente
 
-  1.1 [link1](https://appmaster.io/pt/blog/revisoes-de-codigo)
+- sugere-se realizar o tratamento das possíveis exceções que podem ser jogadas pelos Validators, inclusive caso não seja lançada exceção e apenas retornado false;
 
-  1.2 [link2](https://medium.com/codigorefinado/code-review-revis%C3%A3o-de-c%C3%B3digo-pode-ser-automatizada-ba5f25882774)
+### PremioSeguro
 
-2. Considerando o aprendizado relacionado à tarefa_individual 007, do dia 10/05/2023, onde foram estudados os artivos, constantes do [link1](https://appmaster.io/pt/blog/revisoes-de-codigo) e
-[link2](https://medium.com/codigorefinado/code-review-revis%C3%A3o-de-c%C3%B3digo-pode-ser-automatizada-ba5f25882774). Solicita-se
+- sugere-se a adição de mais comentários ao método obtemPercentualDesconto para aumentar a legibilidade do código;
+- nas linhas 63, 71, 79 e 87 a condição idade > 25 sempre será verdadeira caso as duas condições anteriores também sejam verdadeiras, razão pela qual demonstra-se desnecessária sua escrita;
 
-  3.1 A Revisão do código de todas as classes constantes desse projeto.
+### Teste
 
-  2.1 Elaborar um documento **(formato markdown (.md))**. Neste documento deverá existir uma seção para cada uma das classes do projeto, onde deverão ser descritas as suas não conformidades.
+- o import import java.util.List não está sendo utilizado;
+- na linha 15, que está comentada, está sendo passado como argumento para setDataNascimento um Date, mas deve ser uma String; 
 
-  2.2 Caso queiram apresentar o código corrigido, podem ficar a vontade para isso, embora não seja uma exigência. Mas se o fizer, entregue o arquivo compactado, somente com o código-fonte alterado.
+### CpfValidator
 
-INSTRUÇÕES:
+- sugere-se adicionar mais comentários para aumentar a legibilidade;
+- sugere-se a refatoração para quebrar o método de validação em métodos menores;
+- nas linhas 13 a 15 é validado se o cpf possui mais de 11 números, caso tenha, ele apenas retorna 'false', quando deveria também lançar a exceção de CPF informado inválido;
+- nas linhas 18 a 22 é validado se os caracteres informados são digitos, em caso negativo, ele apenas retorna 'false', quando deveria também lançar a exceção de CPF informado inválido;
+- nas linhas 37 a 48 é validado se os caracteres informados são todos iguais, em caso positivo, ele apenas retorna 'false', quando deveria também lançar a exceção de CPF informado inválido;
 
-1. No seu repositório pessoal, na sua _branch_ pessoal, criar a pasta **aula10**.
-2. Fazer o _commit_ do(s) arquivo(s) nesta pasta.
-3. A data limite para concluir esta tarefa é dia 12/05/2023, as 23h59min.
+
+### DataUtils
+
+- sugere-se adicionar mais comentários para aumentar a legibilidade;
+
+### Demais classes sem comentários
 
 </DIV/>
