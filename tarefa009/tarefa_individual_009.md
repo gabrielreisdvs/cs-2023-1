@@ -1,22 +1,13 @@
 # Tarefa Individual 009 - 15/05/2023
 
-1. Considere as seguintes referências utilizadas nas aulas do dia 15/05/2023:
-   1.1 - [Fatores de qualidade na programação.](https://www.devmedia.com.br/fatores-de-qualidade-na-programacao/29780)
-   1.2 [Qualidade do código e sua importância para um desenvolvimento bem sucedido.](https://bring.com.br/blog/2019/09/10/qualidade-do-codigo-e-sua-importancia-para-um-desenvolvimento-bem-sucedido/)
-   1.3 [Porque a qualidade de código é importante?](https://ezdevs.com.br/porque-a-qualidade-de-codigo-e-importante/)
-     1.4 [Princípios para produzir um código bonito.](https://www.profissionaisti.com.br/principios-para-produzir-um-codigo-bonito/)
-   1.5 [6 dicas fundamentais para um código de qualidade.](https://www.youtube.com/watch?v=MMAu_1KMcMA)
-   1.6 [6 Questões para a Qualidade do Código.](https://vizir.com.br/2016/09/6-questoes-para-a-qualidade-do-codigo-ruby-conf-br-4/)
-   1.7 [DevQA: Como medir qualidade de código?](https://kamillaqueiroz.medium.com/devqa-como-medir-qualidade-de-código-6149fada1e)
-   1.8 [Como melhorar o gerenciamento do código fonte?](https://gaea.com.br/como-melhorar-o-gerenciamento-de-codigo-fonte/)
+## [Porque a qualidade de código é importante?](https://ezdevs.com.br/porque-a-qualidade-de-codigo-e-importante/)
+  
+O autor do texto destaca, inicialmente, que a qualidade e padronização do código é importante para o trabalho em equipe, considerando a necessidade de se evitar retrabalho e manutenções posteriores dificultadas, de modo que o código deve seguir um padrão e ser o mais legível possível.
 
-2. Elaborar um texto sobre um deles, destacando:
-    2.1 - A ideias principais do texto;
-    2.2 - O que é novidade para você, em relação ao conteúdo do artigo;
-    2.3 - O que já era conhecido por você.
-3. Escrever um parágrafo com suas palavras comentando o conteúdo do artigo.
+Segundo o autor, o desenvolvedor precisa se preocupar com a legibilidade, manutenibilidade, baixa complexidade e reusabilidade do código. Com isso, evita-se recursos legados altamente complexos que dificultam a manutenção e até mesmo a inserção de novos membros à equipe de desenvolvimento. Para o autor, a comunicação entre a equipe é fundamental para o estabelecimento dos padrões, sendo que na metodologia scrum isso poderia ser realizado nas dailies.
 
+Além disso, é sugerido a utilização de ferramentas para a padronização, como o prettier/eslint, em que se é possível configurar quais padrões se deseja seguir. Assim, essas ferramentas realizam, em cada salvamento, a configuração do código para seguir os padrões estabelecidos.
 
-**INSTRUÇÕES**
-1. Esta descrição deve ser feita em um arquivo no formato (md), denominado "tarefa009.md" e deve ser _commitado_ no seu repositório pessoal utilizado para manutenção do controle de versão dos artefatos da disciplina.
-2. O prazo para entrega desta tarefa é as 18hs do dia 17/05/2023.
+Ainda, o autor indica ser recomendado explicar seu código a um colega para que ele dê uma opinião sobre o que foi escrito. Ademais, recomenda-se que o código seja exaustivamente testado.
+
+Apesar de já ter conhecimento sobre a necessidade de pradronização do código, nota-se ser muito positiva a indicação de utilização de ferramentas para configuração dos padrões do código, o que ainda não conhecia. Sobre o restante, o texto é bastante claro sobre a importância da comunicação entre os integrantes da equipe, sendo que a construção de um código atentando-se para sua qualidade diminui bastante os custos de uma eventual manutenção.
