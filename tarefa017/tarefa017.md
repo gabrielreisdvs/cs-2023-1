@@ -1,39 +1,29 @@
 # Tarefa 017 - Configuração de software em tempo de execução, Generics, Closure e Logging - 30/06/2023
 
-1. Considere os seguintes links, sobre os temas **Configuração de software em tempo de execução, _Generics_, _Closure_ e _Logging_**
+A configuração de software em tempo de execução envolve a capacidade de ajustar o comportamento de um sistema sem a necessidade de recompilar ou reiniciar o programa. 
 
-  1.1 Configuração de software em tempo de execução:
+Os Profiles no Spring permitem definir diferentes conjuntos de configurações com base em determinados ambientes ou requisitos, como por exemplo, diferenciando os cenários de desenvolvimento, teste e produção. Com os Profiles é possível definir diferentes valores de propriedades, configurar componentes específicos e ativar ou desativar funcionalidades de acordo com o ambiente de execução.
 
-      1.1.1 - [Link1](https://www.baeldung.com/spring-profiles);
+A inversão de controle (IoC) é um princípio de engenharia de software que permite delegar a responsabilidade de criar e gerenciar objetos ou partes do programa para um framework ou container, geralmente aplicado na programação orientada a objeto. No caso do framework Spring, isso ocorre por meio do mecanismo de injeção de dependências.
 
-      1.1.2 - [Link2](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring).
+A injeção de dependências é um padrão em que em vez de criar objetos dentro de outros objetos, as dependências necessárias são injetadas nos objetos dependentes.
 
-  1.2 _Closure_:
+A utilização da configuração de software em tempo de execução com Spring demanda a definição dos profiles para cada ambiente; a configuração das propriedades de conexão; a criação de classes de configuração da conexão com o banco de dados, utilizando-se das anotações @Configuration e @Profile para utilização da injeção de dependências; e a ativação do profile no ambiente de execução.
 
-    1.2.1 - [Link3](https://www.geeksforgeeks.org/closures-in-java-with-examples/).
+Antes de falarmos sobre Closure, destaca-se que as funções lambda são expressões compactas e concisas que representam um bloco de código executável. Elas são usadas para criar implementações de interfaces funcionais de forma mais sucinta e expressiva, sendo frequentemente utilizadas em conjunto com métodos como o forEach, que permite percorrer facilmente elementos de uma coleção ou stream e aplicar uma ação (expressa como uma função lambda) em cada elemento.
 
-    1.2.2 - [Link4](https://receitasdecodigo.com.br/java/exemplo-de-foreach-do-java-8).
+Uma closure é uma função ou objeto que "carrega" consigo o contexto em que foi definida, permitindo o acesso a variáveis locais mesmo após o término da execução desse contexto. Em Java, as closures são comumente implementadas por funções lambda.
 
-    1.2.3 - [Link5](https://www.devmedia.com.br/como-usar-funcoes-lambda-em-java/32826).
+Por sua vez, o Generics é um recurso introduzido na versão 5 do Java que permite a criação de classes, interfaces e métodos que podem ser parametrizados para trabalhar com diferentes tipos de dados de forma segura e genérica, evitando códigos redundantes, castings excessivos e erros em tempo de execução. A sintaxe básica para usar Generics em Java é por meio do uso de colchetes angulares (<>) para especificar os tipos parametrizados.
 
-  1.3 _Generics_:
+Em Java Generics, os wildcards são um recurso que permite lidar com tipos desconhecidos ou desconhecidos em tempo de compilação ao trabalhar com classes, interfaces ou métodos parametrizados. Existe três tipos de wildcard: Unknown Wildcard, ou seja, Wildcard desconhecido; Extends Wildcard; e Super wildcard. O Unknown é utilizado quando não se sabe o tipo do objeto; o extends para possibilitar o uso de vários tipos que se relacionam entre si; e o super com tipos superiores específicos, como classes pai.
 
-    1.3.1 - [Link6](https://www.devmedia.com.br/usando-generics-em-java/28981).
+A utilização de Generics em métodos permite criar métodos genéricos que podem trabalhar com diferentes tipos de dados de forma segura e reutilizável.
 
-    1.3.2 - [Link7](https://www.devmedia.com.br/java-generics-trabalhando-com-metodos/30911).
+Ressalta-se que algumas coisas não são permitidas com Generics, tais como a criação direta de instâncias de tipos genéricos, o uso de tipos primitivos como argumentos genéricos e o uso de tipos genéricos em enumerações.
 
-    1.3.3 - [Link8](https://howtodoinjava.com/java/generics/complete-java-generics-tutorial/).
+O logging em Java é um recurso que permite a captura e o registro de informações relevantes durante a execução do programa. O logging é utilizado para acompanhar o fluxo de execução, diagnosticar problemas, monitorar o desempenho e obter insights sobre o comportamento do sistema. A API de logging em Java é fornecida pela plataforma Java SE e é acessível por meio do pacote java.util.logging, que oferece um conjunto de classes e métodos para criar registros de log em diferentes níveis de detalhe, mas também podem ser utilizados outros frameworks, tais como Log4j, Logback e tinylog.
 
-  1.4 _Logging_:
+Para utilizar o logging em um aplicativo Java, é necessário criar um objeto Logger, que representa o ponto de entrada para registrar mensagens de log. Cada Logger é associado a um nome específico, geralmente relacionado ao pacote ou classe que está sendo logada. Além disso, Appenders e Layouts são componentes fundamentais que ajudam a definir como as mensagens de log são formatadas e para onde elas são direcionadas.
 
-    1.4.1 - [Link9](https://www.loggly.com/ultimate-guide/java-logging-basics/).
-
-    1.4.2 - [Link10](https://www.journaldev.com/977/logger-in-java-logging-example).
-
-    1.4.3 - [Link11](https://www.edureka.co/blog/logger-in-java).
-
-2. Solicita o estudo destes temas e elaborar um texto descrito, manifestando seu entendimento a respeito de cada um deles e ainda apresentando exemplos de utilização dos mesmos.
-
-**INSTRUÇÕES**
-1. Esta é uma tarefa individual. A entrega deve ser entregue no seu repositório pessoal utilizado para a manutenção do controle de versão dos artefatos da disciplina, dentro de uma pasta chamada tarefa017.
-2. O prazo para entrega desta tarefa é as 23h59min do dia 02/07/2023.
+Em Java logging, os levels (níveis) são usados para classificar a importância das mensagens de log. Cada mensagem de log é atribuída a um nível específico, que indica o quão significativa é a informação registrada. Ainda, os formatters são responsáveis por definir o formato das mensagens de log antes de serem registradas, permitindo personalizar a aparência e a estrutura das mensagens de log, tornando-as mais legíveis e informativas.
